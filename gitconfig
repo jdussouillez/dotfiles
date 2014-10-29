@@ -1,0 +1,12 @@
+[user]
+	name = Junior Dussouillez
+	email = #email#
+[credential]
+	helper = cache --timeout=3600
+[color]
+	ui = true
+[push]
+	default = matching
+[core]
+	excludesfile = /home/junior/.gitignore
+	editor = emacs
