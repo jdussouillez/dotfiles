@@ -1,3 +1,5 @@
+# -*- sh -*- # Tells Emacs to use Bash syntax highlighting
+
 # System-wide .bashrc file for interactive bash(1) shells.
 
 # To enable the settings / commands in this file for login shells as well,
@@ -174,6 +176,13 @@ function unbackup {
 
 alias ubackup='unbackup'
 
+#
+########## ALERT ##########
+#
+# Notify when a command is finished
+# sleep 5; alert "finished !"
+alias alert='notify-send --urgency=low -i "$([ $? -eq 0 ] && echo terminal || echo error)"'
+
 
 #
 ########## LIBS ##########
@@ -207,7 +216,8 @@ alias gd='git diff'
 alias gb='git branch -a'
 
 # Others
-alias ll='ls -alh'
+alias ll='ls -lh'
+alias la='ls -a'
 alias e='emacs -nw 2>/dev/null'
 alias pdf='atril'
 alias gcc='colorgcc'
