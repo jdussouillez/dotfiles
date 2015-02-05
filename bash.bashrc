@@ -216,8 +216,11 @@ alias gd='git diff'
 alias gb='git branch -a'
 
 # Others
-alias ll='ls -lh'
+alias l='ls'
 alias la='ls -a'
+alias ll='ls -lh'
+alias lla='ls -lha'
+
 alias e='emacs -nw 2>/dev/null'
 alias pdf='atril'
 alias gcc='colorgcc'
