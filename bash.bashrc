@@ -111,12 +111,17 @@ export MARKPATH=$HOME/.marks
 function jump { 
     cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
+alias j="jump"
+
 function mark { 
     mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
 }
+
 function unmark { 
     rm -i "$MARKPATH/$1"
 }
+alias umark="unmark"
+
 function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
@@ -150,6 +155,7 @@ function backup {
     fi
     return $?
 }
+alias bak='backup'
 
 function unbackup {
     if [ $# -ne 1 ]; then
@@ -175,6 +181,7 @@ function unbackup {
 }
 
 alias ubackup='unbackup'
+alias ubak='unbackup'
 
 #
 ########## ALERT ##########
@@ -207,6 +214,7 @@ alias nemo='nemo 2>/dev/null'
 alias atril='atril 2>/dev/null'
 
 # Git
+alias g='git'
 alias gl='git log --graph --abbrev-commit --decorate --date=relative --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" --all'
 alias git-tree='perl ~/Documents/Progs/forest.pl --pretty=format:"%C(red)%h %C(magenta)(%ar) %C(blue)%an %C(reset)%s" --style=15'
 alias gt='git-tree'
