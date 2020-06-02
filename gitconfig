@@ -11,6 +11,8 @@
 	autocrlf = false
 [commit]
 	gpgsign = true
+	template = ~/configuration/git-commit-msg-template/commit-msg-template.txt
+    	cleanup = strip
 [diff]
 	tool = meld
 [merge]
