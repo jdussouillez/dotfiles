@@ -12,8 +12,10 @@
 [commit]
 	gpgsign = true
 	template = ~/configuration/git-commit-msg-template/commit-msg-template.txt
-    	cleanup = strip
+	cleanup = strip
 [diff]
 	tool = meld
 [merge]
 	tool = meld
+[tag]
+	forceSignAnnotated = true
