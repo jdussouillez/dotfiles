@@ -23,8 +23,6 @@ alias ldapsearch='ldapsearch -x -W -H "ldap://<srv1>:389 ldap://<srv1>" -D "CN=D
 alias ldapmodify='ldapmodify -x -W -H "ldap://<srv1>:389 ldap://<srv2>" -D "CN=DUSSOUILLEZ Junior,OU=..."'
 
 alias mvn-update='mvn versions:display-dependency-updates'
-
-alias history="HISTTIMEFORMAT='%F %T %t' history"
 alias giveme="sudo chown <myuser>:<mygroup>"
 
 mvn-version() {
