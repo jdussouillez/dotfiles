@@ -2,6 +2,9 @@
 ############### CUSTOM ###############
 #
 
+# JVM
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+
 SERVERS=(
     srv0 # Server SRV0
 )
@@ -15,18 +18,20 @@ alias la='ls -a'
 alias ll='ls -lh'
 alias lla='ls -lha'
 alias alert='notify-send --urgency=low -i "$([ $? -eq 0 ] && echo terminal || echo error)"'
+alias giveme="sudo chown junior:junior"
 
 alias gb='git branch -a'
 alias gs='git status'
 
-alias ldapsearch='ldapsearch -x -W -H "ldap://<srv1>:389 ldap://<srv1>" -D "CN=DUSSOUILLEZ Junior,OU=..." -b "DC=<root>" -LLL'
-alias ldapmodify='ldapmodify -x -W -H "ldap://<srv1>:389 ldap://<srv2>" -D "CN=DUSSOUILLEZ Junior,OU=..."'
+alias ldapsearch='ldapsearch -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "CN=DUSSOUILLEZ Junior,OU=<ou>,DC=<root>" -b "DC=<root>" -LLL'
+alias ldapmodify='ldapmodify -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "CN=DUSSOUILLEZ Junior,OU=<ou>,DC=<root>"'
 
-alias mvn-update='mvn versions:display-dependency-updates'
-alias giveme="sudo chown <myuser>:<mygroup>"
+alias m="mvn"
+# alias m='JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 /usr/local/netbeans-12.0/netbeans/java/maven/bin/mvn'
+alias mvn-update='m versions:display-dependency-updates'
 
 mvn-version() {
-    mvn versions:set -DnewVersion=$1 -DgenerateBackupPoms=false
+    m versions:set -DnewVersion=$1 -DgenerateBackupPoms=false
 }
 
 # https://github.com/nvbn/thefuck
