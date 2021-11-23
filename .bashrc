@@ -49,7 +49,7 @@ eval $(thefuck --alias)
 ##########
 # Backup #
 ##########
-function backup {
+backup() {
     if [ $# -ne 1 ]; then
 	echo "Usage: backup <FILE/FOLDER>"
 	return 1
@@ -67,7 +67,7 @@ function backup {
 }
 alias bak='backup'
 
-function unbackup {
+unbackup() {
     if [ $# -ne 1 ]; then
 	echo "Usage: unbackup <FILE.BAK>"
 	return 1
@@ -98,21 +98,21 @@ alias ubak='unbackup'
 #########
 # http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 export MARKPATH=$HOME/.marks
-function jump {
+jump() {
     cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
 alias j="jump"
 
-function mark {
+mark() {
     mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
 }
 
-function unmark {
+unmark() {
     rm -i "$MARKPATH/$1"
 }
 alias umark="unmark"
 
-function marks {
+marks() {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
 
