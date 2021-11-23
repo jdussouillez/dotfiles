@@ -154,6 +154,14 @@ traceroute-mapper() {
 ##############
 alias k="kubectl"
 
+kbash() {
+    if [ "$#" -eq 1 ]; then
+        k exec -it "$1" -- /bin/bash
+    else
+        k run alpine-debug --rm -i --tty --image alpine -- /bin/sh
+    fi
+}
+
 export PATH="${PATH}:${HOME}/.krew/bin"
 
 #######
