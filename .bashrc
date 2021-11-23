@@ -1,17 +1,13 @@
-#
-############### CUSTOM ###############
-#
+# ...
 
-# JVM
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+######################################
+#               CUSTOM               #
+######################################
 
-SERVERS=(
-    srv0 # Server SRV0
-)
-
-for server in "${SERVERS[@]}"; do
-    alias $server="ssh ${server}.mydomain"
-done
+########
+# Misc #
+########
+export EDITOR="emacs"
 
 alias l='ls'
 alias la='ls -a'
@@ -20,11 +16,22 @@ alias lla='ls -lha'
 alias alert='notify-send --urgency=low -i "$([ $? -eq 0 ] && echo terminal || echo error)"'
 alias giveme="sudo chown junior:junior"
 
+#######
+# Git #
+#######
 alias gb='git branch -a'
 alias gs='git status'
 
+########
+# LDAP #
+########
 alias ldapsearch='ldapsearch -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "CN=DUSSOUILLEZ Junior,OU=<ou>,DC=<root>" -b "DC=<root>" -LLL'
 alias ldapmodify='ldapmodify -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "CN=DUSSOUILLEZ Junior,OU=<ou>,DC=<root>"'
+
+########
+# Java #
+########
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
 alias m="mvn"
 # alias m='JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 /usr/local/netbeans-12.0/netbeans/java/maven/bin/mvn'
@@ -34,10 +41,14 @@ mvn-version() {
     m versions:set -DnewVersion=$1 -DgenerateBackupPoms=false
 }
 
-# https://github.com/nvbn/thefuck
+########
+# Fuck #
+########
 eval $(thefuck --alias)
 
-########## BACKUP ##########
+##########
+# Backup #
+##########
 function backup {
     if [ $# -ne 1 ]; then
 	echo "Usage: backup <FILE/FOLDER>"
@@ -82,9 +93,10 @@ function unbackup {
 alias ubackup='unbackup'
 alias ubak='unbackup'
 
-########## MARKS ##########
+#########
+# Marks #
+#########
 # http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
-#
 export MARKPATH=$HOME/.marks
 function jump {
     cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
@@ -113,13 +125,39 @@ _completemarks() {
 
 complete -F _completemarks jump j unmark umark
 
-# NVM
+########
+# Node #
+########
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Traceroute-mapper
-# https://github.com/stefansundin/traceroute-mapper
-function traceroute-mapper {
+###########
+# Network #
+###########
+# SSH aliases
+SERVERS=(
+    srv0 # Server SRV0
+    srv1 # Server SRV1
+)
+for server in "${SERVERS[@]}"; do
+    alias $server="ssh ${server}.mydomain"
+done
+
+# Traceroute-mapper (https://github.com/stefansundin/traceroute-mapper)
+traceroute-mapper() {
     xdg-open "https://stefansundin.github.io/traceroute-mapper/?trace=$(traceroute -q1 $* | sed ':a;N;$!ba;s/\n/%0A/g')"
 }
+
+##############
+# Kubernetes #
+##############
+alias k="kubectl"
+
+export PATH="${PATH}:${HOME}/.krew/bin"
+
+#######
+# AWS #
+#######
+alias ec2-connect="aws ssm start-session --target"
+alias ec2-terminate="aws ec2 terminate-instances --instance-ids"
