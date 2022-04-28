@@ -41,6 +41,9 @@ mvn-version() {
     m versions:set -DnewVersion=$1 -DgenerateBackupPoms=false
 }
 
+# Quarkus
+alias qd="m quarkus:dev -Djvm.args=\"-Xmx512m\""
+
 ########
 # Fuck #
 ########
