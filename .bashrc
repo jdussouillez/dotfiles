@@ -15,6 +15,8 @@ alias ll='ls -lh'
 alias lla='ls -lha'
 alias alert='notify-send --urgency=low -i "$([ $? -eq 0 ] && echo terminal || echo error)"'
 alias giveme="sudo chown junior:junior"
+alias json="bat -l json"
+alias yaml="bat -l yaml"
 
 #######
 # Git #
@@ -155,7 +157,10 @@ traceroute-mapper() {
 ##############
 # Kubernetes #
 ##############
+export PATH="${PATH}:${HOME}/.krew/bin"
 alias k="kubectl"
+# alias connect-eks-test="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig test-euw3"
+# alias connect-eks-prod="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig prod-euw3"
 
 kbash() {
     if [ "$#" -eq 1 ]; then
@@ -165,7 +170,8 @@ kbash() {
     fi
 }
 
-export PATH="${PATH}:${HOME}/.krew/bin"
+source <(kubectl completion bash)
+complete -F __start_kubectl k
 
 #######
 # AWS #
