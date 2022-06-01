@@ -161,6 +161,9 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias k="kubectl"
 # alias connect-eks-test="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig test-euw3"
 # alias connect-eks-prod="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig prod-euw3"
+alias kns="k ns"
+alias kpod="k get pod"
+alias klog="k logs -f"
 
 kbash() {
     if [ "$#" -eq 1 ]; then
