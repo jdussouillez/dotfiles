@@ -181,3 +181,4 @@ complete -F __start_kubectl k
 #######
 alias ec2-connect="aws ssm start-session --target"
 alias ec2-terminate="aws ec2 terminate-instances --instance-ids"
+alias aws-s3-local="aws s3 --endpoint-url=http://127.0.0.1:4566"
