@@ -35,23 +35,39 @@ alias ldapmodify='ldapmodify -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "
 ########
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
+# alias mvn='JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 /home/hifi-filter.net/dussouille/Documents/Apps/Maven/apache-maven-3.8.4/bin/mvn'
 alias m="mvn"
-# alias m='JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64 /usr/local/netbeans-12.0/netbeans/java/maven/bin/mvn'
 alias mvn-update='m versions:display-dependency-updates'
 
 mvn-version() {
     m versions:set -DnewVersion=$1 -DgenerateBackupPoms=false
 }
 
-# Quarkus
-quarkus-dev {
-    m quarkus:dev -Djvm.args="-Xmx${size}"
+###########
+# Quarkus #
+###########
+# Dev mode
+qd() {
+    local maxHeapSize="$1"
+    if [ -z "$maxHeapSize" ]; then
+        maxHeapSize="512m"
+    fi
+    m quarkus:dev -Djvm.args="-Xmx$maxHeapSize"
 }
-alias qd="quarkus-dev 512m"
+# No dev mode
+q() {
+    local maxHeapSize="$1"
+    if [ -z "$maxHeapSize" ]; then
+        maxHeapSize="512m"
+    fi
+    java "-Xmx$maxHeapSize" -jar target/quarkus-app/quarkus-run.jar
+}
+
 # Per project
-alias qdp0="qd"
-alias qdp1="qd 1536m"
-alias qdp2="qd"
+alias qdp0="qd 1536m"
+alias qdp1="qd"
+alias qp0="q 1536m"
+alias qp1="q"
 
 ########
 # Fuck #
