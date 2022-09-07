@@ -46,22 +46,7 @@ mvn-version() {
 ###########
 # Quarkus #
 ###########
-# Dev mode
-qd() {
-    local maxHeapSize="$1"
-    if [ -z "$maxHeapSize" ]; then
-        maxHeapSize="512m"
-    fi
-    m quarkus:dev -Djvm.args="-Xmx$maxHeapSize" "${@:2}"
-}
-# No dev mode
-q() {
-    local maxHeapSize="$1"
-    if [ -z "$maxHeapSize" ]; then
-        maxHeapSize="512m"
-    fi
-    java "-Xmx$maxHeapSize" -jar target/quarkus-app/quarkus-run.jar "${@:2}"
-}
+alias qd="m quarkus:dev -Djvm.args=\"-Xmx512m\""
 
 ########
 # Fuck #
