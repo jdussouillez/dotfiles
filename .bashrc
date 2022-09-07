@@ -52,7 +52,7 @@ qd() {
     if [ -z "$maxHeapSize" ]; then
         maxHeapSize="512m"
     fi
-    m quarkus:dev -Djvm.args="-Xmx$maxHeapSize"
+    m quarkus:dev -Djvm.args="-Xmx$maxHeapSize" "${@:2}"
 }
 # No dev mode
 q() {
@@ -60,14 +60,8 @@ q() {
     if [ -z "$maxHeapSize" ]; then
         maxHeapSize="512m"
     fi
-    java "-Xmx$maxHeapSize" -jar target/quarkus-app/quarkus-run.jar
+    java "-Xmx$maxHeapSize" -jar target/quarkus-app/quarkus-run.jar "${@:2}"
 }
-
-# Per project
-alias qdp0="qd 1536m"
-alias qdp1="qd"
-alias qp0="q 1536m"
-alias qp1="q"
 
 ########
 # Fuck #
