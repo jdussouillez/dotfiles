@@ -44,7 +44,14 @@ mvn-version() {
 }
 
 # Quarkus
-alias qd="m quarkus:dev -Djvm.args=\"-Xmx512m\""
+quarkus-dev {
+    m quarkus:dev -Djvm.args="-Xmx${size}"
+}
+alias qd="quarkus-dev 512m"
+# Per project
+alias qdp0="qd"
+alias qdp1="qd 1536m"
+alias qdp2="qd"
 
 ########
 # Fuck #
