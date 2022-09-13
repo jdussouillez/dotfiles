@@ -166,6 +166,7 @@ alias k="kubectl"
 alias kns="k ns"
 alias kpod="k get pod"
 alias klog="k logs -f"
+#alias krollout="k rollout restart"
 
 kbash() {
     if [ "$#" -eq 1 ]; then
