@@ -49,6 +49,11 @@ mvn-version() {
 alias qd="m quarkus:dev -Djvm.args=\"-Xmx512m\""
 
 ########
+# gRPC #
+########
+alias grpcurl="/home/junior/Documents/Apps/grpcurl_1.8.7_linux_x86_64/grpcurl"
+
+########
 # Fuck #
 ########
 eval $(thefuck --alias)
