@@ -63,17 +63,17 @@ eval $(thefuck --alias)
 ##########
 backup() {
     if [ $# -ne 1 ]; then
-	echo "Usage: backup <FILE/FOLDER>"
-	return 1
+        echo "Usage: backup <FILE/FOLDER>"
+        return 1
     fi
     local FILE="$1"
     local DATETIME=$(date "+%d-%m-%Y_%H-%M-%S")
     if [ -d "$FILE" ]; then
-	FILE=${FILE%/} # Remove the last "/" (if there is one)
-	tar -cvf "${FILE}_$DATETIME.tar.gz.bak" "$FILE"
-	echo "'$FILE' -> '${FILE}_$DATETIME.tar.gz.bak'"
+        FILE=${FILE%/} # Remove the last "/" (if there is one)
+        tar -cvf "${FILE}_$DATETIME.tar.gz.bak" "$FILE"
+        echo "'$FILE' -> '${FILE}_$DATETIME.tar.gz.bak'"
     else
-	cp -avf "$FILE" "${FILE}_$DATETIME.bak"
+        cp -avf "$FILE" "${FILE}_$DATETIME.bak"
     fi
     return $?
 }
@@ -81,23 +81,23 @@ alias bak='backup'
 
 unbackup() {
     if [ $# -ne 1 ]; then
-	echo "Usage: unbackup <FILE.BAK>"
-	return 1
+        echo "Usage: unbackup <FILE.BAK>"
+        return 1
     fi
     local BAK_FILE=$1
     local LAST_EXT=${BAK_FILE##*.}
     if [ "$LAST_EXT" != "bak" ]; then
-	echo "Error: not a \".bak\" file"
-	return 2
+        echo "Error: not a \".bak\" file"
+        return 2
     fi
     local EXT=${BAK_FILE#*.}
     local FILE=${BAK_FILE%%.*}
     if [ "$EXT" = "tar.gz.bak" ]; then
-	mkdir -vp "$FILE"
-	tar -xvf "$BAK_FILE" -C "$FILE"
-	echo "'$BAK_FILE' -> '$FILE'"
+        mkdir -vp "$FILE"
+        tar -xvf "$BAK_FILE" -C "$FILE"
+        echo "'$BAK_FILE' -> '$FILE'"
     else
-	cp -v "$BAK_FILE" "$FILE"
+        cp -v "$BAK_FILE" "$FILE"
     fi
     return $?
 }
