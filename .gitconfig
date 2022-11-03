@@ -9,6 +9,7 @@
 [core]
 	editor = emacs
 	autocrlf = false
+	symlinks = true
 [commit]
 	gpgsign = true
 	template = ~/configuration/git-commit-msg-template/commit-msg-template.txt
