@@ -10,6 +10,7 @@
 export EDITOR="emacs"
 
 alias l="ls"
+alias sl="ls"
 alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ls -lha"
