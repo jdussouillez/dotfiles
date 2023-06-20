@@ -194,3 +194,9 @@ alias aws-local="aws --endpoint-url=http://127.0.0.1:4566"
 # Angular #
 ###########
 source <(ng completion script)
+
+#########
+# McFly #
+#########
+export MCFLY_HISTORY_LIMIT=20000
+eval "$(mcfly init bash)"
