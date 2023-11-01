@@ -200,3 +200,9 @@ source <(ng completion script)
 #########
 export MCFLY_HISTORY_LIMIT=20000
 eval "$(mcfly init bash)"
+
+##########
+# SdkMan #
+##########
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
