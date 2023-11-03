@@ -187,7 +187,7 @@ complete -F __start_kubectl k
 # AWS #
 #######                                                                                                               
 # export AWS_PROFILE=admin                                                                                            
-alias awslogin=aws sso login --sso-session FRPO245
+alias awslogin="aws sso login --sso-session FRPO245"
 
 ###########
 # Angular #
