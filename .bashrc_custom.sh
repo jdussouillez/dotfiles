@@ -199,3 +199,8 @@ eval "$(mcfly init bash)"
 ##########
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#############
+# Tailscale #
+#############
+alias tailscaleup="sudo tailscale up --accept-routes --operator=$USER"
