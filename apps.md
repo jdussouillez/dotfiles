@@ -34,8 +34,9 @@
 - [nvm](https://github.com/nvm-sh/nvm)
 - [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
-## Docker & Kubernetes
+## Containers
 
+- [docker](https://www.docker.com/)
 - [dive](https://github.com/wagoodman/dive)
 - [k9s](https://github.com/derailed/k9s)
 
@@ -46,8 +47,12 @@
 ## Text & IDE
 
 - [netbeans](https://netbeans.apache.org/front/main/)
+- [intellij](https://www.jetbrains.com/fr-fr/idea/)
 - [emacs-nox](https://www.gnu.org/software/emacs/)
 - [marktext](https://github.com/marktext/marktext)
+- [visual-studio-code](https://code.visualstudio.com/)
+  - [xml-tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
+  - [rainbow-csv](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
 
 ## Git
 
@@ -56,6 +61,8 @@
 ## Network
 
 - [wireshark](https://gitlab.com/wireshark/wireshark)
+- [tunnel-mole](https://github.com/robbie-cahill/tunnelmole-client)
+- [tailscale](https://tailscale.com/)
 
 ## Browser
 
@@ -72,12 +79,20 @@
 - [etcher](https://github.com/balena-io/etcher)
 - [ventoy](https://github.com/ventoy/Ventoy)
 
+## Backup & sync
+
+- [grsync](https://www.opbyte.it/grsync/index.html)
+- [timeshift](https://github.com/linuxmint/timeshift)
+- [insync](https://www.insynchq.com/)
+
+## Media
+
+- [shutter](https://github.com/shutter-project/shutter)
+- [kazam](https://github.com/henrywoo/kazam)
+- [vlc](https://github.com/videolan/vlc)
+
 ## Misc
 
-- [vlc](https://github.com/videolan/vlc)
-- [shutter](https://github.com/shutter-project/shutter)
-- [timeshift](https://github.com/linuxmint/timeshift)
 - [postman](https://www.postman.com/)
 - [redshift](https://github.com/jonls/redshift)
 - [remmina](https://gitlab.com/Remmina/Remmina)
-
