@@ -1,0 +1,18 @@
+k9s:
+  cluster: arn:xxxxx/xxxxx
+  readOnly: false
+  namespace:
+    active: app-test-x
+    lockFavorites: true
+    favorites:
+    - app-test-x
+    - app-test-y
+    - app-test-z
+    - app-prod-x
+    - app-prod-y
+    - app-prod-z
+  view:
+    active: po
+  featureGates:
+    nodeShell: false
+  portForwardAddress: localhost

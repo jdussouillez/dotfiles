@@ -159,6 +159,7 @@ traceroute-mapper() {
 # Kubernetes #
 ##############
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export K9S_CONFIG_DIR=/home/junior/.config/k9s/
 alias k="kubectl"
 # alias connect-eks-test="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig test-euw3"
 # alias connect-eks-prod="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig prod-euw3"
