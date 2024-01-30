@@ -189,12 +189,6 @@ alias awslogin="aws sso login --sso-session FRPO245"
 ###########
 source <(ng completion script)
 
-#########
-# McFly #
-#########
-export MCFLY_HISTORY_LIMIT=20000
-eval "$(mcfly init bash)"
-
 ##########
 # SdkMan #
 ##########
