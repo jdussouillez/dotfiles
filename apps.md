@@ -91,6 +91,12 @@
 - [kazam](https://github.com/henrywoo/kazam)
 - [vlc](https://github.com/videolan/vlc)
 
+## Games
+
+- [xmoto](https://xmoto.tuxfamily.org/)
+- [teeworlds](https://www.teeworlds.com/)
+- [knetwalk](https://apps.kde.org/knetwalk/) (if on KDE)
+
 ## Misc
 
 - [postman](https://www.postman.com/)
