@@ -11,7 +11,6 @@
 - [fd](https://github.com/sharkdp/fd)
 - [bat](https://github.com/sharkdp/bat)
 - [task](https://github.com/go-task/task)
-- ~~[mcfly](https://github.com/cantino/mcfly)~~
 - [atuin](https://github.com/atuinsh/atuin)
 - [thefuck](https://github.com/nvbn/thefuck)
 - [screenfetch](https://github.com/KittyKatt/screenFetch)
@@ -20,6 +19,7 @@
 - [shellcheck](https://github.com/koalaman/shellcheck)
 - [zx](https://github.com/google/zx)
 - [grpcurl](https://github.com/fullstorydev/grpcurl)
+- [nmap](https://nmap.org/)
 
 ## Java
 
@@ -44,12 +44,11 @@
 
 - [dbeaver-ce](https://github.com/dbeaver/dbeaver)
 
-## Text & IDE
+## IDE
 
 - [netbeans](https://netbeans.apache.org/front/main/)
 - [intellij](https://www.jetbrains.com/fr-fr/idea/)
 - [emacs-nox](https://www.gnu.org/software/emacs/)
-- [marktext](https://github.com/marktext/marktext)
 - [visual-studio-code](https://code.visualstudio.com/)
   - [xml-tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
   - [rainbow-csv](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
@@ -64,10 +63,17 @@
 - [tunnel-mole](https://github.com/robbie-cahill/tunnelmole-client)
 - [tailscale](https://tailscale.com/)
 
+## Text editors
+
+- [marktext](https://github.com/marktext/marktext)
+- [libreoffice](https://fr.libreoffice.org/)
+
 ## Browser
 
 - [google-chrome](https://www.google.com/intl/en_us/chrome/)
 - [firefox](https://www.mozilla.org/en-US/firefox/)
+
+Plugins:
 - [ublock-origin](https://github.com/gorhill/uBlock)
 - [privacy-badger](https://github.com/EFForg/privacybadger)
 - [wappalyzer](https://www.wappalyzer.com/)
