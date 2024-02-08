@@ -63,7 +63,7 @@
 - [tunnel-mole](https://github.com/robbie-cahill/tunnelmole-client)
 - [tailscale](https://tailscale.com/)
 
-## Text editors
+## Text editor
 
 - [marktext](https://github.com/marktext/marktext)
 - [libreoffice](https://fr.libreoffice.org/)
@@ -97,7 +97,7 @@ Plugins:
 - [kazam](https://github.com/henrywoo/kazam)
 - [vlc](https://github.com/videolan/vlc)
 
-## Games
+## Game
 
 - [xmoto](https://xmoto.tuxfamily.org/)
 - [teeworlds](https://www.teeworlds.com/)
