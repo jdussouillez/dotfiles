@@ -62,6 +62,7 @@
 - [wireshark](https://gitlab.com/wireshark/wireshark)
 - [tunnel-mole](https://github.com/robbie-cahill/tunnelmole-client)
 - [tailscale](https://tailscale.com/)
+- [forticlient](https://www.fortinet.com/fr/support/product-downloads)
 
 ## Text editor
 
@@ -108,3 +109,5 @@ Plugins:
 - [postman](https://www.postman.com/)
 - [redshift](https://github.com/jonls/redshift)
 - [remmina](https://gitlab.com/Remmina/Remmina)
+- [solaar](https://github.com/pwr-Solaar/Solaar)
+
