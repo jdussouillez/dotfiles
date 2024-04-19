@@ -165,6 +165,13 @@ complete -F __start_kubectl k
 #######
 # export AWS_PROFILE=admin
 alias awslogin="aws sso login --sso-session FRPO245"
+alias aws-local="aws --endpoint-url=http://127.0.0.1:4566"
+
+########
+# HIFI #
+########
+export PATH="${PATH}:/home/dussouillez/Documents/Dev/hififilter/hifi-stack/bin"
+alias hs="hifi-stack"
 
 ###########
 # Angular #
