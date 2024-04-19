@@ -92,6 +92,10 @@ Plugins:
 - [timeshift](https://github.com/linuxmint/timeshift)
 - [insync](https://www.insynchq.com/)
 
+## Security
+
+- [clamav](https://www.clamav.net/)
+
 ## Media
 
 - [shutter](https://github.com/shutter-project/shutter)
