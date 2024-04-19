@@ -20,32 +20,16 @@ alias gb="git branch -a"
 alias gs="git status"
 
 ########
-# LDAP #
-########
-alias ldapsearch='ldapsearch -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "CN=DUSSOUILLEZ Junior,OU=<ou>,DC=<root>" -b "DC=<root>" -LLL'
-alias ldapmodify='ldapmodify -x -W -H "ldap://<srv0>:389 ldap://<srv1>:389" -D "CN=DUSSOUILLEZ Junior,OU=<ou>,DC=<root>"'
-
-########
 # Java #
 ########
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
-alias m="mvn"
-alias mvn-update="m versions:display-dependency-updates"
+alias m="./mvnw"
+alias mvn-update="./mvnw versions:display-dependency-updates"
 
 mvn-version() {
     m versions:set -DnewVersion=$1 -DgenerateBackupPoms=false
 }
-
-###########
-# Quarkus #
-###########
-alias qd="m quarkus:dev -Djvm.args=\"-Xmx512m\""
-
-########
-# gRPC #
-########
-alias grpcurl="/home/junior/Documents/Apps/grpcurl_1.8.7_linux_x86_64/grpcurl"
 
 ########
 # Fuck #
@@ -161,11 +145,9 @@ traceroute-mapper() {
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export K9S_CONFIG_DIR=/home/junior/.config/k9s/
 alias k="kubectl"
-# alias connect-eks-test="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig test-euw3"
-# alias connect-eks-prod="aws-azure-login -m cli --no-prompt; eks-update-kubeconfig prod-euw3"
 alias kgp="k get pod"
 alias klog="k logs -f"
-#alias krollout="k rollout restart"
+alias krollout="k rollout restart"
 
 kbash() {
     if [ "$#" -eq 1 ]; then
@@ -180,8 +162,8 @@ complete -F __start_kubectl k
 
 #######
 # AWS #
-#######                                                                                                               
-# export AWS_PROFILE=admin                                                                                            
+#######
+# export AWS_PROFILE=admin
 alias awslogin="aws sso login --sso-session FRPO245"
 
 ###########
@@ -189,13 +171,21 @@ alias awslogin="aws sso login --sso-session FRPO245"
 ###########
 source <(ng completion script)
 
-##########
-# SdkMan #
-##########
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+################
+# Grafana Loki #
+################
+export LOKI_ADDR=https://logs-prod-eu-west-0.grafana.net
+export LOKI_USERNAME=140461
+export LOKI_PASSWORD=TODO
+eval "$(logcli --completion-script-bash)"
 
 #############
 # Tailscale #
 #############
 alias tailscaleup="sudo tailscale up --accept-routes --operator=$USER"
+
+##########
+# SDKMAN #
+##########
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
