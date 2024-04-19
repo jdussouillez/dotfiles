@@ -145,6 +145,7 @@ traceroute-mapper() {
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export K9S_CONFIG_DIR=/home/junior/.config/k9s/
 alias k="kubectl"
+alias kns="k ns"
 alias kgp="k get pod"
 alias klog="k logs -f"
 alias krollout="k rollout restart"
