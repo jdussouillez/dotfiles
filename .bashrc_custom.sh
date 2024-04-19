@@ -163,9 +163,12 @@ complete -F __start_kubectl k
 #######
 # AWS #
 #######
-# export AWS_PROFILE=admin
 alias awslogin="aws sso login --sso-session FRPO245"
-alias aws-local="aws --endpoint-url=http://127.0.0.1:4566"
+alias awslocal="aws --endpoint-url=http://127.0.0.1:4566"
+
+awsadmin() {
+    export AWS_PROFILE="admin"
+}
 
 ########
 # HIFI #
