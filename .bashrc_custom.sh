@@ -13,6 +13,14 @@ alias giveme="sudo chown junior:junior"
 alias json="bat -l json"
 alias yaml="bat -l yaml"
 
+update() {
+    sudo apt-get update
+    sudo apt-get upgrade -y
+    sudo apt-get dist-upgrade -y
+    sudo apt-get autoremove -y
+    screenfetch
+}
+
 #######
 # Git #
 #######
