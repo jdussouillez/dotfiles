@@ -1,22 +1,24 @@
 [user]
-	name = Junior DUSSOUILLEZ
-	email = <email>
-	signingKey = <signingkey>
+    name = Junior DUSSOUILLEZ
+    email = <email>
+    signingKey = <signingkey>
 [color]
-	ui = true
+    ui = true
 [push]
-	default = matching
+    default = matching
 [core]
-	editor = emacs
-	autocrlf = false
-	symlinks = true
+    editor = emacs
+    autocrlf = false
+    symlinks = true
 [commit]
-	gpgsign = true
-	template = ~/configuration/git-commit-msg-template/commit-msg-template.txt
-	cleanup = strip
+    gpgsign = true
+    template = ~/configuration/git-commit-msg-template/commit-msg-template.txt
+    cleanup = strip
 [diff]
-	tool = meld
+    tool = meld
 [merge]
-	tool = meld
+    tool = meld
 [tag]
-	forceSignAnnotated = true
+    forceSignAnnotated = true
+[init]
+    defaultBranch = master
