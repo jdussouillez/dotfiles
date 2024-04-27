@@ -12,6 +12,7 @@ alias alert='notify-send --urgency=low -i "$([ $? -eq 0 ] && echo terminal || ec
 alias giveme="sudo chown junior:junior"
 alias json="bat -l json"
 alias yaml="bat -l yaml"
+# alias xed="gnome-text-editor" # Ubuntu only
 
 update() {
     sudo apt-get update
