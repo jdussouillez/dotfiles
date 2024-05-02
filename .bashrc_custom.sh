@@ -204,6 +204,12 @@ eval "$(logcli --completion-script-bash)"
 #############
 alias tailscaleup="sudo tailscale up --accept-routes --operator=$USER"
 
+#########
+# Atuin #
+#########
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
+
 ##########
 # SDKMAN #
 ##########
