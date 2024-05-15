@@ -19,6 +19,9 @@ update() {
     sudo apt-get upgrade -y
     sudo apt-get dist-upgrade -y
     sudo apt-get autoremove -y
+    if command -v snap &> /dev/null; then
+        sudo snap refresh
+    fi
     screenfetch
 }
 
