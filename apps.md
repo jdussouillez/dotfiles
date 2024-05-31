@@ -107,6 +107,7 @@ Plugins:
 - [xmoto](https://xmoto.tuxfamily.org/)
 - [teeworlds](https://www.teeworlds.com/)
 - [knetwalk](https://apps.kde.org/knetwalk/) (if on KDE)
+- [0ad](https://play0ad.com/)
 
 ## Misc
 
