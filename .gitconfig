@@ -10,9 +10,10 @@
     editor = emacs
     autocrlf = false
     symlinks = true
+    hookspath = /home/junior/dev/app/hifi-stack/.husky
+    excludesFile = ~/.gitignore
 [commit]
     gpgsign = true
-    template = ~/configuration/git-commit-msg-template/commit-msg-template.txt
     cleanup = strip
 [diff]
     tool = meld
@@ -20,5 +21,12 @@
     tool = meld
 [tag]
     forceSignAnnotated = true
+[gpg]
+    program = gpg
+    format = openpgp
 [init]
     defaultBranch = master
+[gpg "ssh"]
+    program = ssh-keygen
+    allowedSignersFile = ""
+
