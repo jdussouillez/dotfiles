@@ -186,7 +186,7 @@ awsadmin() {
 ########
 # HIFI #
 ########
-export PATH="${PATH}:/home/dussouillez/Documents/Dev/hififilter/hifi-stack/bin"
+export PATH="${PATH}:/home/junior/dev/hifi-stack/bin"
 alias hs="hifi-stack"
 
 ###########
