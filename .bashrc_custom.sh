@@ -15,6 +15,7 @@ alias yaml="bat -l yaml"
 # alias xed="gnome-text-editor" # Ubuntu only
 
 update() {
+    set -x
     sudo apt-get update
     sudo apt-get upgrade -y
     sudo apt-get dist-upgrade -y
@@ -22,6 +23,11 @@ update() {
     if command -v snap &> /dev/null; then
         sudo snap refresh
     fi
+    if command -v brew &> /dev/null; then
+        brew update
+        brew upgrade
+    fi
+    set +x
     screenfetch
 }
 
