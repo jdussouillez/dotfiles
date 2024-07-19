@@ -36,6 +36,7 @@ update() {
 #######
 alias gb="git branch -a"
 alias gs="git status"
+alias gd="GIT_EXTERNAL_DIFF=difft git diff"
 
 ########
 # Java #
