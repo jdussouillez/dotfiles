@@ -56,6 +56,7 @@
 ## Git
 
 - [gitkraken](https://www.gitkraken.com/)
+- [difftastic](https://github.com/wilfred/difftastic)
 
 ## Network
 
