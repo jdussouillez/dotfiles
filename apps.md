@@ -20,6 +20,7 @@
 - [zx](https://github.com/google/zx)
 - [grpcurl](https://github.com/fullstorydev/grpcurl)
 - [nmap](https://nmap.org/)
+- [topgrade](https://github.com/topgrade-rs/topgrade)
 
 ## Java
 

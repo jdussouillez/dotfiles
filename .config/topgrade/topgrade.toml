@@ -1,0 +1,39 @@
+# https://github.com/topgrade-rs/topgrade
+[include]
+
+[misc]
+pre_sudo = true
+disable = ["clam_av_db"]
+ignore_failures = []
+set_title = true
+display_time = true
+assume_yes = true
+no_retry = true
+cleanup = true
+
+[pre_commands]
+
+[post_commands]
+
+[commands]
+
+[python]
+
+[composer]
+self_update = true
+
+[brew]
+autoremove = true
+
+[linux]
+
+[git]
+max_concurrency = 1
+
+repos = [
+]
+
+[npm]
+
+[firmware]
+upgrade = true
