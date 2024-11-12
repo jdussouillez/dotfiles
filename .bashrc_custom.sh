@@ -194,8 +194,9 @@ awsadmin() {
 ########
 # HIFI #
 ########
-export PATH="${PATH}:/home/junior/dev/hifi-stack/bin"
-alias hs="hifi-stack"
+source <(hifictl completion bash)
+alias hctl="hifictl"
+alias hs="hifictl"
 
 ###########
 # Angular #
