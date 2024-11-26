@@ -196,8 +196,8 @@ awsadmin() {
 ########
 source <(hifictl completion bash)
 alias hctl="hifictl"
-alias hs="hifictl"
 alias h="hifictl"
+alias hs="hifictl stack -w"
 
 ###########
 # Angular #
