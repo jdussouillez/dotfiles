@@ -170,6 +170,13 @@ alias kgp="k get pod"
 alias klog="k logs -f"
 alias krollout="k rollout restart"
 
+# Generate KUBECONFIG env var
+export KUBECONFIG=""
+[[ -f "${HOME}/.kube/config" ]]; KUBECONFIG="${HOME}/.kube/config"
+for file in $(find "${HOME}/.kube/hifictl" -type f); do
+    KUBECONFIG="${KUBECONFIG}:${file}"
+done
+
 kbash() {
     if [ "$#" -eq 1 ]; then
         k exec -it "$1" -- /bin/bash
@@ -188,7 +195,7 @@ alias awslogin="aws sso login --sso-session frpo245"
 alias awslocal="aws --endpoint-url=http://127.0.0.1:4566"
 
 awsadmin() {
-    export AWS_PROFILE="admin"
+    export AWS_PROFILE="Admin"
 }
 
 ########
