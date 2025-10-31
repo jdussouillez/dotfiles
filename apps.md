@@ -17,10 +17,10 @@
 - [cloc](https://github.com/AlDanial/cloc)
 - [hr](https://github.com/LuRsT/hr)
 - [shellcheck](https://github.com/koalaman/shellcheck)
-- [zx](https://github.com/google/zx)
 - [grpcurl](https://github.com/fullstorydev/grpcurl)
 - [nmap](https://nmap.org/)
 - [topgrade](https://github.com/topgrade-rs/topgrade)
+- [svgo](https://github.com/svg/svgo)
 
 ## Java
 
@@ -34,6 +34,7 @@
 
 - [nvm](https://github.com/nvm-sh/nvm)
 - [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
+- [zx](https://github.com/google/zx)
 
 ## Containers
 
@@ -43,12 +44,12 @@
 
 ## Database
 
-- [dbeaver-ce](https://github.com/dbeaver/dbeaver)
+- [dbeaver-ce](https://github.com/dbeaver/dbeaver) *If not using Intellij*
 
 ## IDE
 
-- [netbeans](https://netbeans.apache.org/front/main/)
 - [intellij](https://www.jetbrains.com/fr-fr/idea/)
+- [netbeans](https://netbeans.apache.org/front/main/) *If not using Intellij*
 - [emacs-nox](https://www.gnu.org/software/emacs/)
 - [visual-studio-code](https://code.visualstudio.com/)
   - [xml-tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)
@@ -64,11 +65,9 @@
 - [wireshark](https://gitlab.com/wireshark/wireshark)
 - [tunnel-mole](https://github.com/robbie-cahill/tunnelmole-client)
 - [tailscale](https://tailscale.com/)
-- [forticlient](https://www.fortinet.com/fr/support/product-downloads)
 
 ## Text editor
 
-- [marktext](https://github.com/marktext/marktext)
 - [libreoffice](https://fr.libreoffice.org/)
 
 ## Browser
