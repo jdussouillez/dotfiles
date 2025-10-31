@@ -45,6 +45,7 @@
 ## Database
 
 - [dbeaver-ce](https://github.com/dbeaver/dbeaver) *If not using Intellij*
+- [redis-insight](https://redis.io/insight/)
 
 ## IDE
 
