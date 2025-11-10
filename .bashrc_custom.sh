@@ -42,8 +42,6 @@ alias gd="GIT_EXTERNAL_DIFF=difft git diff"
 ########
 # Java #
 ########
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
-
 alias m="./mvnw"
 alias mvn-update="./mvnw versions:display-dependency-updates"
 
