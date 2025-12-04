@@ -14,7 +14,6 @@ alias json="bat -l json"
 alias yaml="bat -l yaml"
 # alias xed="gnome-text-editor" # Ubuntu only
 
-# Deprecated, use "topgrade" instead
 update() {
     set -x
     sudo apt-get update
