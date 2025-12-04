@@ -113,8 +113,9 @@ Plugins:
 
 ## Misc
 
+- [homebrew](https://brew.sh/)
 - [postman](https://www.postman.com/)
-- [redshift](https://github.com/jonls/redshift)
+- [redshift](https://github.com/jonls/redshift) (or Linux Mint's "Night life" default app)
 - [remmina](https://gitlab.com/Remmina/Remmina)
 - [solaar](https://github.com/pwr-Solaar/Solaar)
 
