@@ -27,6 +27,9 @@ update() {
         brew update
         brew upgrade
     fi
+    if command -v flatpak &> /dev/null; then
+        flatpak update
+    fi
     set +x
     screenfetch
 }
