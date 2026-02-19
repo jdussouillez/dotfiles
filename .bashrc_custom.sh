@@ -231,6 +231,11 @@ alias tailscaleup="sudo tailscale up --accept-routes --operator=$USER"
 eval "$(atuin init bash)"
 
 ##########
+# DuckDB #
+##########
+export PATH="/home/junior/.duckdb/cli/latest":$PATH
+
+##########
 # SDKMAN #
 ##########
 export SDKMAN_DIR="$HOME/.sdkman"
