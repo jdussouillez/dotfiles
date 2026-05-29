@@ -236,6 +236,11 @@ eval "$(atuin init bash)"
 export PATH="/home/junior/.duckdb/cli/latest":$PATH
 
 ##########
+# Direnv #
+##########
+eval "$(direnv hook bash)"
+
+##########
 # SDKMAN #
 ##########
 export SDKMAN_DIR="$HOME/.sdkman"
