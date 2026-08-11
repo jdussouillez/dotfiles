@@ -206,6 +206,12 @@ alias hctl="hifictl"
 alias h="hifictl"
 alias hs="hifictl stack"
 
+#######
+# NCU #
+#######
+# https://github.com/raineorshine/npm-check-updates
+alias ncu="ncu --format no-group"
+
 ###########
 # Angular #
 ###########
