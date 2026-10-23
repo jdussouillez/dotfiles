@@ -217,14 +217,6 @@ alias ncu="ncu --format no-group"
 ###########
 source <(ng completion script)
 
-################
-# Grafana Loki #
-################
-export LOKI_ADDR=https://logs-prod-eu-west-0.grafana.net
-export LOKI_USERNAME=140461
-export LOKI_PASSWORD=TODO
-eval "$(logcli --completion-script-bash)"
-
 #############
 # Tailscale #
 #############
